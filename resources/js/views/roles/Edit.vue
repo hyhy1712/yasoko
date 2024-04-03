@@ -1,0 +1,55 @@
+<template>
+    <create-role-component
+        :page-title="$t('role.title_edit')"
+        :role="role"
+        :errors="errors"
+        :update-role="submit"
+        v-if="isLoadingComplete()"
+    ></create-role-component>
+</template>
+
+<script setup>
+import {ref} from "vue";
+import CreateRoleComponent from '@/views/roles/Create.vue';
+import {getRouteParams, translate} from "@/helpers/CommonHelper.js";
+import RoleService from "@/services/system/RoleService.js";
+import {throwNotFoundModelException} from "@/helpers/ExceptionHelper.js";
+import {isEmptyObject} from "@/helpers/CommonHelper.js";
+import {isSuccessRequest} from "@/helpers/AxiosHelper.js";
+import {messageError, messageSuccess} from "@/helpers/MessageHelper.js";
+import router from "@/router/index.js";
+import {useLoading} from "@/composables/loading.js";
+
+const {isLoadingComplete, setLoading, setLoadingComplete} = useLoading();
+const roleId = getRouteParams('id');
+const role = ref({});
+const errors = ref({});
+
+const roleService = new RoleService();
+const getDetailRole = () => {
+    setLoading();
+    roleService.detail(roleId).then((data) => {
+        if (isEmptyObject(data)) {
+            throwNotFoundModelException();
+        }
+        role.value = data;
+        role.value.permissions = data.permissions.map(item => item.id);
+        setLoadingComplete();
+    })
+}
+getDetailRole();
+
+const submit = (formData) => {
+    setLoading();
+    roleService.update(roleId, formData).then((data) => {
+        if (isSuccessRequest(data)) {
+            messageSuccess(translate('role.messages.update_success'));
+            router.back();
+            return;
+        }
+        messageError(translate('role.messages.update_fail'));
+        errors.value = data.data ?? {};
+        setLoadingComplete();
+    })
+}
+</script>

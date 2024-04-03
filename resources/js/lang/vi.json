@@ -1,0 +1,208 @@
+{
+    "message": {
+        "warning": {
+            "forbidden": "Bạn không có quyền truy cập",
+            "not_found_http": "Trang bạn tìm kiếm không tồn tại",
+            "not_found_model": "Bản ghi bạn tìm kiếm hiện không tồn tại"
+        }
+    },
+    "sidebar": {
+        "dashboard": "Tổng quan",
+        "admin": "Quản lý hệ thống",
+        "user": "Người dùng",
+        "role": "Vai trò",
+        "orders": "Đơn hàng"
+    },
+    "dashboard": {
+        "intro": "Hello"
+    },
+    "footer": {
+        "intro": "© 2023 Educa Corporation. All rights reserved"
+    },
+    "logout": "Đăng xuất",
+    "common": {
+        "buttons": {
+            "add": "Thêm mới",
+            "edit": "Cập nhật",
+            "authorize": "Phân quyền",
+            "upload": "Tải lên",
+            "download": "Tải xuống",
+            "advanced": "Nâng cao",
+            "search": "Tìm kiếm",
+            "reset_search": "Bỏ bộ lọc",
+            "save": "Lưu",
+            "cancel": "Hủy",
+            "refresh": "Tải lại"
+        },
+        "placeholder": {
+            "quick_search": "Nhập thông tin tìm kiếm..."
+        },
+        "columns": {
+            "action": "Hành động"
+        }
+    },
+    "login": {
+        "title": "Đăng nhập",
+        "intro": "Chào mừng bạn đến với hệ thống vận hành của Educa. <br> Vui lòng đăng nhập để tiếp tục công việc!",
+        "buttons": {
+            "login": "Đăng nhập"
+        },
+        "input_text": {
+            "account": "Tài khoản",
+            "password": "Mật khẩu"
+        },
+        "messages": {
+            "account_required": "Vui lòng nhập account!",
+            "password_required": "Vui lòng nhập mật khẩu!",
+            "login_fail": "Tài khoản hoặc mật khẩu không hợp lệ!"
+        }
+    },
+    "role": {
+        "title": "Vai trò",
+        "title_create": "Thêm mới vai trò",
+        "title_edit": "Cập nhật vai trò",
+        "columns": {
+            "name": "Mã vai trò",
+            "display_name": "Tên vai trò",
+            "description": "Mô tả",
+            "created_at": "Ngày tạo",
+            "updated_at": "Ngày cập nhật",
+            "is_active": "Kích hoạt",
+            "permission": "Chức năng/quyền"
+        },
+        "column_values": {
+            "is_active": {
+                "true": "Kích hoạt",
+                "false": "Không kích hoạt"
+            }
+        },
+        "other_actions": {
+            "active": "Kích hoạt",
+            "deactivate": "Hủy kích hoạt"
+        },
+        "messages": {
+            "create_success": "Tạo mới vai trò thành công",
+            "create_fail": "Tạo mới vai trò thất bại",
+            "update_success": "Cập nhật vai trò thành công",
+            "update_fail": "Cập nhật vai trò thất bại",
+            "active_success": "Active vai trò thành công",
+            "active_fail": "Active vai trò thất bại",
+            "deactivate_success": "Deactivate role thành công",
+            "deactivate_fail": "Deactivate vai trò thất bại"
+        },
+        "modal": {
+            "active": {
+                "title": "Active role",
+                "content": "Bạn có chắc chắn muốn active role?"
+            },
+            "deactivate": {
+                "title": "Deactivate role",
+                "content": "Bạn có chắc chắn muốn deactivate role?"
+            }
+        }
+    },
+    "user": {
+        "title": "Người dùng",
+        "title_create": "Thêm mới người dùng",
+        "title_edit": "Cập nhật người dùng",
+        "columns": {
+            "name": "Tên",
+            "username": "Username",
+            "password": "Mật khẩu",
+            "password_confirmation": "Nhập lại mật khẩu",
+            "created_at": "Ngày tạo",
+            "updated_at": "Ngày cập nhật",
+            "department": "Phòng ban",
+            "gtc_extension": "Đầu số",
+            "call_center": "Tổng đài",
+            "email": "Email",
+            "role": "Quyền",
+            "status": "Trạng thái"
+        },
+        "column_values": {
+        },
+        "other_actions": {
+        },
+        "messages": {
+            "create_success": "Tạo mới người dùng thành công",
+            "create_fail": "Tạo mới người dùng thất bại",
+            "update_success": "Cập nhật người dùng thành công",
+            "update_fail": "Cập nhật người dùng thất bại"
+        }
+    },
+    "order": {
+        "title": "Đơn hàng",
+        "title_create": "Thêm mới người dùng",
+        "title_edit": "Cập nhật người dùng",
+        "serial_number": "Serial Number",
+        "delivery_form": "Hình thức vận chuyển",
+        "payment_method": "Phương thức thanh toán",
+        "single_type": "Loại đơn",
+        "order_code": "Mã đơn hàng",
+        "customer_information": "Thông tin khách hàng",
+        "other_information": "Thông tin khác",
+        "single_information": "Thông tin đơn",
+        "status": "Trạng thái",
+        "order_status": "Trạng thái đơn",
+        "category": "Loại sản phẩm",
+        "product": "Sản phẩm",
+        "campaign": "Chiến dịch",
+        "payment_status": "Trạng thái thanh toán",
+        "note": "Ghi chú",
+        "sale": "Sale",
+        "phone": "Số điện thoại",
+        "order_date": "Ngày đặt hàng",
+        "province": "Tỉnh/Thành",
+        "district": "Quận/Huyện",
+        "region": "Vùng miền",
+        "room": "Phòng",
+        "regions": {
+            "north": "Miền bắc",
+            "central_region": "Miền nam",
+            "southern_region": "Miền trung"
+        },
+        "button": {
+            "upload": "Tải lên",
+            "operation": "Thao tác",
+            "all": "Tất cả"
+        },
+        "payment_status_type": {
+            "unpaid": "Chưa thanh toán",
+            "paid": "Đã thanh toán",
+            "are_being_paid": "Đang thanh toán"
+        },
+        "fot": {
+            "delivery_unit": "Đơn vị chuyển phát",
+            "ship_now": "Ship luôn",
+            "switch_to_province": "Tỉnh chuyển",
+            "soft_Code_Conversion": "Chuyển Mã mềm",
+            "school": "Nhà trường"
+        },
+        "payment_methods": {
+            "direct_payment": "Thanh toán trực tiếp",
+            "transfer_payment": "Thanh toán chuyển khoản",
+            "pay_in_installments": "Thanh toán trả góp"
+        },
+        "type": {
+            "new": "Bán mới",
+            "extend": "Gia hạn",
+            "upsale": "Upsale",
+            "cross_sale": "Cross sale"
+        },
+        "status_list": {
+            "not_yet_shipped": "Chưa chuyển đơn",
+            "close_application": "Đóng đơn",
+            "delivered_successfully": "Giao thành công",
+            "delivering": "Đang giao",
+            "completed": "Đã hoàn",
+            "return": "Giao lại",
+            "cancel": "Hủy ",
+            "retribution": "Báo hoàn",
+            "overdue_for_processing": "Quá hạn xử lý",
+            "waiting_for_sales_to_process": "Chờ sales xử lý",
+            "dhl_delivery": "Giao hàng DHL",
+            "reception": "Tiếp nhận",
+            "sale_canceled": "Sale báo huỷ"
+        }
+    }
+}
