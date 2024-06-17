@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7106f1016f95499d80ce26d5d94360fe",
+    "content-hash": "77f938c20c21a0d556e956b27440ef21",
     "packages": [
         {
             "name": "alexusmai/kafka-log-driver",
@@ -1111,7 +1111,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyhy1712/pkg-common.git",
-                "reference": "bbaa8a3ed9835e7a3c8fffce890bec23208ce234"
+                "reference": "9fbaf44ccf6933cd5c6577bceeec4b1551148188"
             },
             "require": {
                 "prettus/l5-repository": "*"
@@ -1133,7 +1133,7 @@
                 }
             ],
             "description": "Hyhy package common",
-            "time": "2024-04-01T07:40:30+00:00"
+            "time": "2024-05-14T08:17:21+00:00"
         },
         {
             "name": "hyhy/request-logger",
@@ -1174,16 +1174,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.48.4",
+            "version": "v10.48.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7e0701bf59cb76a51f7c1f7bea51c0c0c29c0b72"
+                "reference": "91e2b9e218afa4e5c377510faa11957042831ba3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7e0701bf59cb76a51f7c1f7bea51c0c0c29c0b72",
-                "reference": "7e0701bf59cb76a51f7c1f7bea51c0c0c29c0b72",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/91e2b9e218afa4e5c377510faa11957042831ba3",
+                "reference": "91e2b9e218afa4e5c377510faa11957042831ba3",
                 "shasum": ""
             },
             "require": {
@@ -1377,7 +1377,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-21T13:36:36+00:00"
+            "time": "2024-04-30T12:52:59+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -8376,8 +8376,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "hyhy/request-logger": 20,
-        "hyhy/common": 20
+        "hyhy/common": 20,
+        "hyhy/request-logger": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

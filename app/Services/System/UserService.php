@@ -22,6 +22,13 @@ class UserService
         return $this->userRepository->list($params);
     }
 
+    public function getUserSale(array $params = [])
+    {
+        return $this->userRepository->whereHas('roles', function ($query) {
+            $query->where('roles.name', "user-sale");
+        })->list($params);
+    }
+
     public function create(array $params)
     {
         try {
@@ -33,11 +40,11 @@ class UserService
                 'username' => $params['username'],
                 'password' => Hash::make($params['password']),
                 'status' => $params['status'],
-                'gtc_extension' => $params['gtc_extension'],
-                'call_center' => $params['call_center'],
-                'email' => $params['email'],
+                'gtc_extension' => $params['gtc_extension'] ?? null,
+                'call_center' => $params['call_center'] ?? null,
+                'email' => $params['email'] ?? null,
             ]);
-            $this->syncUserRoleAndDepartment($user, $params['role'], $params['department']);
+            $this->syncUserRoleAndDepartment($user, $params['role'] ?? [], $params['department']);
 
             DB::commit();
             return true;
@@ -60,9 +67,11 @@ class UserService
 
             /** @var User $user */
             $user = $this->userRepository->update($params, $id);
-            $this->syncUserRoleAndDepartment($user, $params['role'], $params['department']);
+
+            $this->syncUserRoleAndDepartment($user, $params['role'] ?? [], $params['department']);
 
             DB::commit();
+
             return true;
         } catch (\Throwable $exception) {
             Log::error($exception);
@@ -73,9 +82,6 @@ class UserService
 
     private function syncUserRoleAndDepartment(User $user, $roleIds, $departmentId)
     {
-        $user->groups()->sync([
-            $departmentId => ['type' => User::USER_DEPARTMENT_TYPE_MEMBER]
-        ]);
         $user->roles()->sync($roleIds);
     }
 }

@@ -11,7 +11,7 @@
         "admin": "Quản lý hệ thống",
         "user": "Người dùng",
         "role": "Vai trò",
-        "orders": "Đơn hàng"
+        "category": "Danh mục"
     },
     "dashboard": {
         "intro": "Hello"
@@ -130,79 +130,23 @@
             "update_fail": "Cập nhật người dùng thất bại"
         }
     },
-    "order": {
-        "title": "Đơn hàng",
-        "title_create": "Thêm mới người dùng",
-        "title_edit": "Cập nhật người dùng",
-        "serial_number": "Serial Number",
-        "delivery_form": "Hình thức vận chuyển",
-        "payment_method": "Phương thức thanh toán",
-        "single_type": "Loại đơn",
-        "order_code": "Mã đơn hàng",
-        "customer_information": "Thông tin khách hàng",
-        "other_information": "Thông tin khác",
-        "single_information": "Thông tin đơn",
-        "status": "Trạng thái",
-        "order_status": "Trạng thái đơn",
-        "category": "Loại sản phẩm",
-        "product": "Sản phẩm",
-        "campaign": "Chiến dịch",
-        "payment_status": "Trạng thái thanh toán",
-        "note": "Ghi chú",
-        "sale": "Sale",
-        "phone": "Số điện thoại",
-        "order_date": "Ngày đặt hàng",
-        "province": "Tỉnh/Thành",
-        "district": "Quận/Huyện",
-        "region": "Vùng miền",
-        "room": "Phòng",
-        "regions": {
-            "north": "Miền bắc",
-            "central_region": "Miền nam",
-            "southern_region": "Miền trung"
+    "category": {
+        "title": "Danh mục",
+        "title_create": "Thêm mới danh mục",
+        "title_edit": "Cập nhật danh mục",
+        "columns": {
+            "name": "Tên",
+            "slug": "Slug"
         },
-        "button": {
-            "upload": "Tải lên",
-            "operation": "Thao tác",
-            "all": "Tất cả"
+        "column_values": {
         },
-        "payment_status_type": {
-            "unpaid": "Chưa thanh toán",
-            "paid": "Đã thanh toán",
-            "are_being_paid": "Đang thanh toán"
+        "other_actions": {
         },
-        "fot": {
-            "delivery_unit": "Đơn vị chuyển phát",
-            "ship_now": "Ship luôn",
-            "switch_to_province": "Tỉnh chuyển",
-            "soft_Code_Conversion": "Chuyển Mã mềm",
-            "school": "Nhà trường"
-        },
-        "payment_methods": {
-            "direct_payment": "Thanh toán trực tiếp",
-            "transfer_payment": "Thanh toán chuyển khoản",
-            "pay_in_installments": "Thanh toán trả góp"
-        },
-        "type": {
-            "new": "Bán mới",
-            "extend": "Gia hạn",
-            "upsale": "Upsale",
-            "cross_sale": "Cross sale"
-        },
-        "status_list": {
-            "not_yet_shipped": "Chưa chuyển đơn",
-            "close_application": "Đóng đơn",
-            "delivered_successfully": "Giao thành công",
-            "delivering": "Đang giao",
-            "completed": "Đã hoàn",
-            "return": "Giao lại",
-            "cancel": "Hủy ",
-            "retribution": "Báo hoàn",
-            "overdue_for_processing": "Quá hạn xử lý",
-            "waiting_for_sales_to_process": "Chờ sales xử lý",
-            "dhl_delivery": "Giao hàng DHL",
-            "reception": "Tiếp nhận",
-            "sale_canceled": "Sale báo huỷ"
+        "messages": {
+            "create_success": "Tạo mới danh mục thành công",
+            "create_fail": "Tạo mới danh mục thất bại",
+            "update_success": "Cập nhật danh mục thành công",
+            "update_fail": "Cập nhật danh mục thất bại"
         }
     }
 }

@@ -10,9 +10,11 @@
 
 <script setup>
 import {ref} from "vue";
-import CreateRoleComponent from '@/views/roles/Create.vue';
-import {getRouteParams, translate} from "@/helpers/CommonHelper.js";
-import RoleService from "@/services/system/RoleService.js";
+import CreateRoleComponent from '@/views/admin/system/roles/Create.vue';
+import {translate} from "@/helpers/CommonHelper.js";
+import {getCurrentRouteParams} from "@/helpers/RouteHelper.js";
+
+import RoleService from "@/services/admin/system/RoleService.js";
 import {throwNotFoundModelException} from "@/helpers/ExceptionHelper.js";
 import {isEmptyObject} from "@/helpers/CommonHelper.js";
 import {isSuccessRequest} from "@/helpers/AxiosHelper.js";
@@ -21,7 +23,7 @@ import router from "@/router/index.js";
 import {useLoading} from "@/composables/loading.js";
 
 const {isLoadingComplete, setLoading, setLoadingComplete} = useLoading();
-const roleId = getRouteParams('id');
+const roleId = getCurrentRouteParams('id');
 const role = ref({});
 const errors = ref({});
 

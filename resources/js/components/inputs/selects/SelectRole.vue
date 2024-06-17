@@ -4,7 +4,7 @@
 
 <script setup>
 
-import RoleService from "@/services/system/RoleService.js";
+import RoleService from "@/services/admin/system/RoleService.js";
 import BaseSelect from "@/components/inputs/selects/BaseSelect.vue";
 
 function fetchOptions() {

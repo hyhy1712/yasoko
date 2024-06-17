@@ -30,7 +30,7 @@ import {messageSuccess, messageError} from "@/helpers/MessageHelper.js";
 import {translate} from "@/helpers/CommonHelper.js";
 import {cloneObject} from "@/helpers/CommonHelper.js";
 import AppForm from "@/components/views/AppForm.vue";
-import UserService from "@/services/system/UserService.js";
+import UserService from "@/services/admin/system/UserService.js";
 import CommonConstant from "@/constants/CommonConstant.js";
 import EntitySelectConstant from "@/constants/EntitySelectConstant.js";
 

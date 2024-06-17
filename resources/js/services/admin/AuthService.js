@@ -1,6 +1,6 @@
 import {axiosGet, axiosPost, isSuccessRequest} from "@/helpers/AxiosHelper.js";
 import apiPathConstant from "@/constants/ApiPathConstant.js";
-import {authStore} from "@/stores/AuthStore.js";
+import {authStore} from "@/stores/admin/AuthStore.js";
 import router from "@/router/index.js";
 import routeNameConstant from "@/constants/RouteNameConstant.js";
 

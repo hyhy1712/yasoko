@@ -6,7 +6,11 @@ const PERMISSIONS = {
 
     USER_VIEW: "user-view",
     USER_CREATE: "user-create",
-    USER_EDIT: "user-update"
+    USER_EDIT: "user-update",
+
+    CATEGORY_VIEW: "category-view",
+    CATEGORY_CREATE: "category-create",
+    CATEGORY_EDIT: "category-update"
 };
 
 export default PERMISSIONS;

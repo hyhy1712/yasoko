@@ -11,6 +11,10 @@ const ROUTE_NAME = {
     USER_CREATE: "user-create",
     USER_EDIT: "user-edit",
 
+    CATEGORY_VIEW: "category-view",
+    CATEGORY_CREATE: "category-create",
+    CATEGORY_EDIT: "category-edit",
+
     ORDER_VIEW: "order-view",
 };
 

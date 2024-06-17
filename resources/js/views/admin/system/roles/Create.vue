@@ -49,8 +49,8 @@
 
 <script setup>
 import {ref, defineProps} from "vue";
-import RoleService from "@/services/system/RoleService.js";
-import PermissionService from "@/services/system/PermissionService.js";
+import RoleService from "@/services/admin/system/RoleService.js";
+import PermissionService from "@/services/admin/system/PermissionService.js";
 import router from "@/router/index.js";
 import RouteNameConstant from "@/constants/RouteNameConstant.js";
 import {isSuccessRequest} from "@/helpers/AxiosHelper.js";

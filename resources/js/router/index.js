@@ -1,6 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import admin from "./admin.js";
-import {authStore} from "../stores/AuthStore.js";
+import {authStore} from "../stores/admin/AuthStore.js";
 import {isArray, isObject} from "@/helpers/CommonHelper.js";
 import {throwNotFoundHttpException} from "@/helpers/ExceptionHelper";
 

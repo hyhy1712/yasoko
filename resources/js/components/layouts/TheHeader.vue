@@ -31,9 +31,9 @@
 
 import {ref} from "vue";
 import {MenuFoldOutlined, MenuUnfoldOutlined, DownOutlined} from "@ant-design/icons-vue";
-import {authStore} from "@/stores/AuthStore.js";
+import {authStore} from "@/stores/admin/AuthStore.js";
 import logoUser from '@assets/images/logo/user.png';
-import AuthService from "@/services/AuthService.js";
+import AuthService from "@/services/admin/AuthService.js";
 
 const props = defineProps(['sidebarCollapsed']);
 const emit = defineEmits(["triggerSidebarCollapse"])

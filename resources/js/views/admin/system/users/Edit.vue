@@ -11,18 +11,19 @@
 
 <script setup>
 import {ref} from "vue";
-import CreateUserComponent from '@/views/users/Create.vue';
-import {getRouteParams, translate} from "@/helpers/CommonHelper.js";
+import CreateUserComponent from '@/views/admin/system/users/Create.vue';
+import {translate} from "@/helpers/CommonHelper.js";
+import {getCurrentRouteParams} from "@/helpers/RouteHelper.js";
 import {throwNotFoundModelException} from "@/helpers/ExceptionHelper.js";
 import {isEmptyObject} from "@/helpers/CommonHelper.js";
 import {isSuccessRequest} from "@/helpers/AxiosHelper.js";
 import {messageError, messageSuccess} from "@/helpers/MessageHelper.js";
 import router from "@/router/index.js";
 import {useLoading} from "@/composables/loading.js";
-import UserService from "@/services/system/UserService.js";
+import UserService from "@/services/admin/system/UserService.js";
 
 const {isLoadingComplete, setLoading, setLoadingComplete} = useLoading();
-const userId = getRouteParams('id');
+const userId = getCurrentRouteParams('id');
 const user = ref({});
 const errors = ref({});
 const disabledField = ['username'];

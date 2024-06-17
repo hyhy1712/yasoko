@@ -13,11 +13,12 @@
 <script lang="jsx" setup>
 
 import AppPage from "@/components/views/AppPage.vue";
-import {translate, hasPermissions} from "@/helpers/CommonHelper.js";
+import {translate} from "@/helpers/CommonHelper.js";
+import {hasPermissions} from "@/helpers/AuthHelper.js";
 import PermissionConstant from "@/constants/PermissionConstant.js";
 import RouteNameConstant from "@/constants/RouteNameConstant.js";
 import router from "@/router/index.js";
-import UserService from "@/services/system/UserService.js";
+import UserService from "@/services/admin/system/UserService.js";
 import EntitySelectConstant from "@/constants/EntitySelectConstant.js";
 import CommonConstant from "@/constants/CommonConstant.js";
 

@@ -79,7 +79,7 @@
 import {reactive, ref} from 'vue';
 import logoCrm from '@assets/images/logo/crm.png';
 import logoEdupia from '@assets/images/logo/edupia.png';
-import AuthService from "@/services/AuthService.js";
+import AuthService from "@/services/admin/AuthService.js";
 
 const isLoginFail = ref(false);
 const images = reactive({

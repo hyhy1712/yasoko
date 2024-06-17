@@ -75,11 +75,6 @@ const props = defineProps({
 });
 //If is empty props.sourceData => create record, formData = {} will not save old formData when create another record
 //If not empty props.sourceData => update record
-const formData = ref(props.sourceData);
-if (isEmptyObject(props.sourceData)) {
-    formData.value = ref({});
-}
-
 const setDefaultValue = () => {
     props.fields.forEach(field => {
         if (isset(field.default_value)) {
@@ -87,7 +82,12 @@ const setDefaultValue = () => {
         }
     });
 }
-setDefaultValue();
+
+const formData = ref(props.sourceData);
+if (isEmptyObject(props.sourceData)) {
+    formData.value = ref({});
+    setDefaultValue();
+}
 
 const submit = () => {
     const data = props.fields.reduce((result, field) => {

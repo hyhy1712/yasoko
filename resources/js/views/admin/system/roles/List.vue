@@ -15,9 +15,10 @@
 
 <script lang="jsx" setup>
 import {ref} from 'vue';
-import RoleService from "@/services/system/RoleService.js";
+import RoleService from "@/services/admin/system/RoleService.js";
 import AppPage from "@/components/views/AppPage.vue";
-import {translate, hasPermissions} from "@/helpers/CommonHelper.js";
+import {translate} from "@/helpers/CommonHelper.js";
+import {hasPermissions} from "@/helpers/AuthHelper.js";
 import PermissionConstant from "@/constants/PermissionConstant.js";
 import RouteNameConstant from "@/constants/RouteNameConstant.js";
 import router from "@/router/index.js";

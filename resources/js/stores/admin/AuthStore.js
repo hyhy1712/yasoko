@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia';
-import AuthService from "@/services/AuthService.js";
+import AuthService from "@/services/admin/AuthService.js";
 import {toRaw} from "vue";
 import {isEmptyObject, isArray, getEnv} from "@/helpers/CommonHelper.js";
 

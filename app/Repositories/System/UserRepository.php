@@ -7,6 +7,15 @@ use Hyhy\Common\Repositories\BaseRepository;
 
 class UserRepository extends BaseRepository
 {
+    protected $filterFields = [
+        'name' => 'name',
+        'username' => 'username',
+        'gtc_extension' => 'gtc_extension',
+        'email' => 'email',
+        'status' => [self::CONDITION_FILTER_FIELD_ISSET, '=', 'status'],
+        'call_center' => [self::CONDITION_FILTER_FIELD_NOT_EMPTY, 'IN', 'call_center'],
+    ];
+
     public function model()
     {
         return User::class;
@@ -24,20 +33,12 @@ class UserRepository extends BaseRepository
                 ]
             ];
         }
-        if (!empty($params['name'])) $conditions['name'] = $params['name'];
-        if (!empty($params['username'])) $conditions['username'] = $params['username'];
-        if (!empty($params['gtc_extension'])) $conditions['gtc_extension'] = $params['gtc_extension'];
-        if (!empty($params['email'])) $conditions['email'] = $params['email'];
-        if (isset($params['"status" '])) $conditions['"status" '] = $params['"status" '];
 
-        if (!empty($params['call_center'])) {
-            $conditions['call_center'] = [
-                'call_center',
-                'IN',
-                $params['call_center']
-            ];
+        if (!empty($params['department'])) {
+            $this->whereHas('groups', function ($query) use ($params) {
+                $query->whereIn('group_id', $params['department']);
+            });
         }
-
 
         if (!empty($params['role'])) {
             $this->whereHas('roles', function ($query) use ($params) {
@@ -45,6 +46,9 @@ class UserRepository extends BaseRepository
             });
         }
 
-        return $this->findWherePaginate(where: $conditions, limit: $params['limit'] ?? null, orderBy: ['id' => 'desc']);
+        return $this
+            ->filter($params)
+            ->with('groups')
+            ->findWherePaginate($conditions, $params['limit'] ?? null, ['id' => 'desc']);
     }
 }

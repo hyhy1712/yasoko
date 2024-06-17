@@ -8,11 +8,11 @@
         "php": "^8.1",
         "alexusmai/kafka-log-driver": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^10.10",
+        "hyhy/common": "dev-main@dev",
+        "hyhy/request-logger": "dev-main@dev",
+        "laravel/framework": "^10.48",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "hyhy/request-logger": "dev-main",
-        "hyhy/common": "dev-main",
         "prettus/l5-repository": "^2.9"
     },
     "require-dev": {
