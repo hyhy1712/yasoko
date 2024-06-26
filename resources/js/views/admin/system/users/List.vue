@@ -108,10 +108,10 @@ const fetchData = (params) => {
 
 //Action
 const actionAdd = () => {
-    router.push({name: RouteNameConstant.USER_CREATE});
+    router.push({name: RouteNameConstant.ADMIN_USER_CREATE});
 }
 const actionEdit = ({id}) => {
-    router.push({name: RouteNameConstant.USER_EDIT, params: {id: id}});
+    router.push({name: RouteNameConstant.ADMIN_USER_EDIT, params: {id: id}});
 }
 
 </script>

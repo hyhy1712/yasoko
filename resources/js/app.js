@@ -4,67 +4,27 @@ import {createApp} from "vue";
 import {createPinia} from 'pinia';
 import {languages} from "@assets/js/lang/index.js";
 import router from "@/router/index.js";
-
-
 import {LoadingPlugin} from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/css/index.css';
-
-import {
-    Drawer,
-    Button,
-    List,
-    Menu,
-    message,
-    Card,
-    Table,
-    Select,
-    Input,
-    Layout,
-    Form,
-    Alert,
-    Dropdown,
-    Pagination,
-    Space,
-    Tag,
-    Tree,
-    Modal,
-    RangePicker,
-    DatePicker
-} from 'ant-design-vue';
-
 import 'ant-design-vue/dist/reset.css';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap-utilities.min.css';
-
+import Antd, {
+    message
+} from 'ant-design-vue';
 import axios from "axios";
+import dayjs from 'dayjs';
+import 'dayjs/locale/vi';
 
+dayjs.locale('vi');
+window.dayjs = dayjs();
 window.axios = axios;
 
 const pinia = createPinia();
 
 const app = createApp(App);
 
-//Antd
-app.use(Button);
-app.use(Drawer);
-app.use(List);
-app.use(Menu);
-app.use(Card);
-app.use(Table);
-app.use(Select);
-app.use(Input);
-app.use(Layout);
-app.use(Form);
-app.use(Alert);
-app.use(Dropdown);
-app.use(Pagination);
-app.use(Space);
-app.use(Tag);
-app.use(Tree);
-app.use(Modal);
-app.use(DatePicker);
-app.use(RangePicker);
-
+app.use(Antd);
 app.use(router);
 app.use(pinia);
 app.use(languages);
@@ -73,3 +33,5 @@ app.use(LoadingPlugin);
 app.mount("#app");
 
 app.config.globalProperties.$message = message;
+
+

@@ -43,7 +43,7 @@ function throwException(exception) {
             if (authStore().isLoggedIn()) {
                 pushRouterWithMessage(messageWarning, translate('message.warning.not_found_http'));
             } else {
-                pushRouterWithMessage(messageWarning, translate('message.warning.not_found_http'), routeNameConstant.LOGIN);
+                pushRouterWithMessage(messageWarning, translate('message.warning.not_found_http'), routeNameConstant.ADMIN_LOGIN);
             }
 
             break;

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\System\PermissionController;
@@ -20,14 +21,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
 
-//Api Internal
-Route::middleware('auth:sanctum')->group(function () {
+//Api Admin
+Route::middleware('auth:sanctum')->prefix('admin')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/me', [AuthController::class, 'meInfo']);
 
     Route::prefix('all')->group(function () {
         Route::get('/roles', [RoleController::class, 'all']);
+        Route::get('/time-appointment', [AppointmentController::class, 'getTimeAppointment']);
     });
 
     Route::prefix('roles')->name('roles.')->group(function () {
@@ -48,4 +50,10 @@ Route::middleware('auth:sanctum')->group(function () {
         ],
         ['except' => 'destroy']
     );
+});
+
+//Api Customer
+Route::prefix('appointments')->name('appointments.')->group(function () {
+    Route::get('/get-time', [AppointmentController::class, 'getTimeAppointment']);
+    Route::post('', [AppointmentController::class, 'store']);
 });

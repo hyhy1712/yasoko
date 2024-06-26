@@ -143,7 +143,7 @@ const submit = (formData) => {
     userService.create(formData).then((data) => {
         if (isSuccessRequest(data)) {
             messageSuccess(translate('user.messages.create_success'));
-            router.push({name: RouteNameConstant.USER_VIEW});
+            router.push({name: RouteNameConstant.ADMIN_USER_VIEW});
             return;
         }
         messageError(translate('user.messages.create_fail'));
@@ -152,6 +152,6 @@ const submit = (formData) => {
 }
 
 const cancel = () => {
-    router.push({name: RouteNameConstant.USER_VIEW});
+    router.push({name: RouteNameConstant.ADMIN_USER_VIEW});
 }
 </script>

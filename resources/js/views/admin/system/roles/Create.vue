@@ -149,7 +149,7 @@ const submit = (formData) => {
     roleService.create(formData).then((data) => {
         if (isSuccessRequest(data)) {
             messageSuccess(translate('role.messages.create_success'));
-            router.push({name: RouteNameConstant.ROLE_VIEW});
+            router.push({name: RouteNameConstant.ADMIN_ROLE_VIEW});
             return;
         }
         messageError(translate('role.messages.create_fail'));
@@ -158,6 +158,6 @@ const submit = (formData) => {
 }
 
 const cancel = () => {
-    router.push({name: RouteNameConstant.ROLE_VIEW});
+    router.push({name: RouteNameConstant.ADMIN_ROLE_VIEW});
 }
 </script>

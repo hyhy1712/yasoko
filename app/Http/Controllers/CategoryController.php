@@ -21,7 +21,7 @@ class CategoryController extends Controller
         return responder()->success($this->categoryService->list($request->all()));
     }
 
-    public function store(UserCreateRequest $request)
+    public function store(Request $request)
     {
         $user = $this->categoryService->create($request->all());
         if ($user) {
@@ -35,7 +35,7 @@ class CategoryController extends Controller
         return responder()->success($this->categoryService->detail($id));
     }
 
-    public function update(UserUpdateRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $user = $this->categoryService->update($id, $request->all());
         if ($user) {

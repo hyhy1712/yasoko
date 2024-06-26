@@ -48,3 +48,9 @@ export function cloneObject(object, type = 'object') {
     return Object.assign(result, object);
 }
 
+export function capitalizeFirstLetter(string) {
+    if (!string) return '';
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+

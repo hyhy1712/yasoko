@@ -13,11 +13,12 @@
 <script lang="jsx" setup>
 
 import AppPage from "@/components/views/AppPage.vue";
-import {translate, hasPermissions} from "@/helpers/CommonHelper.js";
+import {translate} from "@/helpers/CommonHelper.js";
 import PermissionConstant from "@/constants/PermissionConstant.js";
 import RouteNameConstant from "@/constants/RouteNameConstant.js";
 import router from "@/router/index.js";
 import CategoryService from "@/services/admin/CategoryService.js";
+import {hasPermissions} from "@/helpers/AuthHelper.js";
 
 const categoryService = new CategoryService();
 
@@ -57,10 +58,10 @@ const fetchData = (params) => {
 
 //Action
 const actionAdd = () => {
-    router.push({name: RouteNameConstant.CATEGORY_CREATE});
+    router.push({name: RouteNameConstant.ADMIN_CATEGORY_CREATE});
 }
 const actionEdit = ({id}) => {
-    router.push({name: RouteNameConstant.CATEGORY_EDIT, params: {id: id}});
+    router.push({name: RouteNameConstant.ADMIN_CATEGORY_EDIT, params: {id: id}});
 }
 
 </script>

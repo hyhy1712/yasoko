@@ -3,7 +3,7 @@ import ApiPathConstant from "@/constants/ApiPathConstant.js";
 
 export default class PermissionService {
     async getList() {
-        return await axiosGet(ApiPathConstant.PERMISSION_LIST).then(({data}) => {
+        return await axiosGet(ApiPathConstant.ADMIN_PERMISSION_LIST).then(({data}) => {
             return data ?? {};
         })
     }

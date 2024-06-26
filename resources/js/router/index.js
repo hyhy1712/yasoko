@@ -1,10 +1,11 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import admin from "./admin.js";
+import customer from "@/router/customer.js";
 import {authStore} from "../stores/admin/AuthStore.js";
 import {isArray, isObject} from "@/helpers/CommonHelper.js";
 import {throwNotFoundHttpException} from "@/helpers/ExceptionHelper";
 
-const routes = [...admin];
+const routes = [...admin, ...customer];
 
 const router = createRouter({
     history: createWebHistory(),

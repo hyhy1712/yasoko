@@ -31,14 +31,14 @@ const menu = [
     {
         name: translate('sidebar.dashboard'),
         isVisible: true,
-        route: routeNameConstant.DASHBOARD,
+        route: routeNameConstant.ADMIN_DASHBOARD,
         sidebarKey: SidebarKeyConstant.DASHBOARD,
         icon: 'dashboard'
     },
     {
         name: translate('sidebar.category'),
         isVisible: currentUser.hasPermissions(permissionConstant.CATEGORY_VIEW),
-        route: routeNameConstant.CATEGORY_VIEW,
+        route: routeNameConstant.ADMIN_CATEGORY_VIEW,
         sidebarKey: SidebarKeyConstant.CATEGORY,
         icon: 'dashboard'
     },

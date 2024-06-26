@@ -26,18 +26,18 @@ export default class AuthService {
         }, {}, false).then((response) => {
             this.setAccessToken(response.data.access_token);
             authStore().setUser(response.data.user);
-            router.push({name: routeNameConstant.HOME_PAGE});
+            router.push({name: routeNameConstant.ADMIN_HOME_PAGE});
         })
     }
 
     logout() {
         this.removeAccessToken();
         authStore().$reset();
-        router.push({name: routeNameConstant.LOGIN});
+        router.push({name: routeNameConstant.ADMIN_LOGIN});
     }
 
     async getCurrentUser() {
-        let response = await axiosGet(apiPathConstant.ME_INFO);
+        let response = await axiosGet(apiPathConstant.ADMIN_ME_INFO);
         if (isSuccessRequest(response)) {
             return response.data
         }

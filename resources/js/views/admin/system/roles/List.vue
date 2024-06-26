@@ -95,10 +95,10 @@ const fetchData = (params) => {
 
 //Action
 const actionAdd = () => {
-    router.push({name: RouteNameConstant.ROLE_CREATE});
+    router.push({name: RouteNameConstant.ADMIN_ROLE_CREATE});
 }
 const actionEdit = ({id}) => {
-    router.push({name: RouteNameConstant.ROLE_EDIT, params: {id: id}});
+    router.push({name: RouteNameConstant.ADMIN_ROLE_EDIT, params: {id: id}});
 }
 const getActionOther = (record) => {
     let otherAction = [];

@@ -8,9 +8,5 @@ class Category extends BaseModel
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'slug',
-    ];
-
+    protected $guarded = [];
 }

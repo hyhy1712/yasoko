@@ -1,4 +1,5 @@
 import router from "@/router/index.js";
+import routeNameConstant from "@/constants/RouteNameConstant.js";
 
 export function reloadCurrentRoute() {
     const currentRoute = router.currentRoute.value;
@@ -10,7 +11,7 @@ export function reloadCurrentRoute() {
 }
 
 
-export function pushRouterWithMessage(messageFunction, message, routeName = routeNameConstant.HOME_PAGE) {
+export function pushRouterWithMessage(messageFunction, message, routeName = routeNameConstant.ADMIN_HOME_PAGE) {
     messageFunction(message);
     router.push({name: routeName});
 }

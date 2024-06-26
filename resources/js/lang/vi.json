@@ -148,5 +148,22 @@
             "update_success": "Cập nhật danh mục thành công",
             "update_fail": "Cập nhật danh mục thất bại"
         }
+    },
+    "appointment": {
+        "title": "Lịch khám",
+        "columns": {
+            "name": "Tên",
+            "slug": "Slug"
+        },
+        "messages": {
+            "create_success": "Đặt lịch khám thành công",
+            "create_fail": "Đặt lịch khám thất bại"
+        },
+        "modal": {
+            "create": {
+                "title": "Xác nhận đặt lịch",
+                "content": "Bạn có chắc chắn muốn đặt lịch với khung giờ này không?"
+            }
+        }
     }
 }
