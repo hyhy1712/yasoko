@@ -1,14 +1,12 @@
 <template>
-    <a-button type="primary" :size="size"
-              style="background: var(--button-save-color); border-color: var(--button-save-color);padding: 0px 30px">
-        {{ $t('common.buttons.save') }}
-    </a-button>
+    <base-button
+        :title="$t('common.buttons.save')"
+        style="background: var(--button-save-color); border-color: var(--button-save-color)"
+    />
 </template>
 
-<script>
+<script setup>
+
 import BaseButton from "@/components/buttons/BaseButton.vue";
 
-export default {
-    extends: BaseButton
-}
 </script>

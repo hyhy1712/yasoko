@@ -2,12 +2,14 @@
     <div id="layout">
         <a-layout>
 
-            <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible :width="260">
-                <div class="logo text-center mb-3">
-                    <h2 class="text-white">
-                        <b v-if="collapsed">YASOKO</b>
-                        <b v-else>YASOKO</b>
-                    </h2>
+            <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible :width="200">
+                <div class="logo text-center mb-3 text-white">
+                    <template v-if="collapsed">
+                        <h2><b>YSK</b></h2>
+                    </template>
+                    <template v-else>
+                        <h2><b>Yasoko</b></h2>
+                    </template>
                 </div>
                 <the-sidebar></the-sidebar>
             </a-layout-sider>

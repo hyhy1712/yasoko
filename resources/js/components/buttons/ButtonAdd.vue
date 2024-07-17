@@ -1,16 +1,14 @@
 <template>
-    <a-button type="primary" :size="size" style="background: var(--button-add-color); border-color: var(--button-add-color)">
-        <template #icon>
-            <img src="@assets/images/icon/create.svg" alt="" class="me-1">
-        </template>
-        {{ $t('common.buttons.add') }}
-    </a-button>
+    <base-button
+        :icon="Icon"
+        :title="$t('common.buttons.add')"
+        style="background: var(--button-add-color); border-color: var(--button-add-color)"
+    />
 </template>
 
-<script>
-import BaseButton from "@/components/buttons/BaseButton.vue";
+<script setup>
 
-export default {
-    extends: BaseButton
-}
+import BaseButton from "@/components/buttons/BaseButton.vue";
+import Icon from '@assets/images/icon/create.svg';
+
 </script>

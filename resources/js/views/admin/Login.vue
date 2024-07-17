@@ -1,14 +1,14 @@
 <template>
     <div class="container-fluid">
         <div class="row" style="min-height: 100vh;">
-            <div class="d-none d-sm-flex col-sm-8 wrapper-col-left">
+            <div class="d-none d-sm-flex col-sm-5 wrapper-col-left">
                 <div>
-                    <img :src="logoCrm" alt="img" style="width:65%">
+<!--                    <img :src="logoCrm" alt="img" style="width:65%">-->
                 </div>
             </div>
-            <div class="col-12 col-sm-4 d-flex flex-column justify-content-between">
+            <div class="col-12 col-sm-7 d-flex flex-column justify-content-between">
                 <div class="login-header mt-3" style="width: 80%;margin:0 auto;">
-                    <img :src="logoEdupia" alt="img" class="">
+<!--                    <img :src="logoEdupia" alt="img" class="">-->
                 </div>
 
                 <div class="login-content" style="width: 80%;margin:0 auto">

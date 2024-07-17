@@ -1,13 +1,12 @@
 <template>
-    <a-button type="primary" :size="size" danger ghost>
-        {{ $t('common.buttons.reset_search') }}
-    </a-button>
+    <base-button
+        :title="$t('common.buttons.reset_search')"
+        danger ghost
+    />
 </template>
 
-<script>
+<script setup>
+
 import BaseButton from "@/components/buttons/BaseButton.vue";
 
-export default {
-    extends: BaseButton
-}
 </script>

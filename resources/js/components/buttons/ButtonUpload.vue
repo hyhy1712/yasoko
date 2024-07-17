@@ -1,17 +1,14 @@
 <template>
-    <a-button type="primary" :size="size"
-              style="background: var(--button-upload-color);border-color: var(--button-upload-color)">
-        <template #icon>
-            <img src="@assets/images/icon/upload.svg" alt="" class="me-1">
-        </template>
-        {{ $t('common.buttons.upload') }}
-    </a-button>
+    <base-button
+        :icon="Icon"
+        :title="$t('common.buttons.upload')"
+        style="background: var(--button-upload-color);border-color: var(--button-upload-color)"
+    />
 </template>
 
-<script>
-import BaseButton from "@/components/buttons/BaseButton.vue";
+<script setup>
 
-export default {
-    extends: BaseButton
-}
+import BaseButton from "@/components/buttons/BaseButton.vue";
+import Icon from '@assets/images/icon/upload.svg';
+
 </script>

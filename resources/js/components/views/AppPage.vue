@@ -16,7 +16,8 @@
                 />
             </a-space>
             <a-dropdown :trigger="['click']" v-if="advancedSearchInput.length > 0"
-                        v-model:open="visibleAdvancedSearch" @openChange="handleVisibleChangeAdvancedSearch">
+                        v-model:open="visibleAdvancedSearch" @openChange="handleVisibleChangeAdvancedSearch"
+                        class="mt-2 mt-sm-0">
                 <template #overlay @click.prevent>
                     <div class="wrapper-advanced-search"
                          style="padding:20px;width:100vh;background-color:#fff; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); border-radius: 2px;">
@@ -30,6 +31,7 @@
                                     :options="input.options ?? []"
                                     :entity="input.entity ?? null"
                                     :multiple="input.multiple ?? false"
+                                    :max-tag-count="input.maxTagCount ?? 1"
                                 >
                                 </app-input>
                             </div>
@@ -51,15 +53,18 @@
     </div>
     <div class="page-button">
         <div class="d-sm-flex justify-content-end row row-cols-sm-auto m-0 mb-sm-3">
-            <button-upload @click="actionUpload" v-if="actionUpload" :size="sizeButton"></button-upload>
-            <button-download @click="actionDownload" v-if="actionDownload" :size="sizeButton"></button-download>
-            <button-add @click="actionAdd" v-if="actionAdd" :size="sizeButton"></button-add>
-            <button-refresh @click="actionRefresh"></button-refresh>
+            <template v-for="button in otherButton">
+                <base-button :icon="button.icon" :title="button.title" @click="button.onClick" :style="button.style"/>
+            </template>
+            <button-upload @click="actionUpload" v-if="actionUpload" :size="sizeButton"/>
+            <button-download @click="actionDownload" v-if="actionDownload" :size="sizeButton"/>
+            <button-add @click="actionAdd" v-if="actionAdd" :size="sizeButton"/>
+            <button-refresh @click="actionRefresh"/>
         </div>
     </div>
     <div class="page-content">
         <a-card class="mt-3">
-            <a-table :columns="columns" :data-source="data.data ?? []" :pagination="false">
+            <a-table :columns="columns" :data-source="data.data ?? []" :pagination="false" :scroll="{x: '100%'}">
                 <template #bodyCell="{ column, record }">
                     <template v-if="column.key === 'action'">
                         <template v-if="actionEdit">
@@ -112,6 +117,7 @@ import ButtonRefresh from "@/components/buttons/ButtonRefresh.vue";
 import AppInput from "@/components/inputs/AppInput.vue";
 import {isEmptyObject, translate, cloneObject, isArray} from "@/helpers/CommonHelper.js";
 import router from "@/router/index.js";
+import BaseButton from "@/components/buttons/BaseButton.vue";
 
 const props = defineProps({
     sizeButton: {
@@ -161,12 +167,16 @@ const props = defineProps({
     clickActionOther: {
         type: Function,
         default: null
+    },
+    otherButton: {
+        type: Array,
+        default: []
     }
 });
 const columns = cloneObject(props.columns, 'array');
 columns.unshift({
     title: '#',
-    width: 2,
+    width: '2%',
     key: 'index',
     customRender: ({index}) => {
         return ++index;
@@ -279,6 +289,7 @@ watch(
 <style lang="scss" scoped>
 :deep(.ant-pagination li) {
     margin-top: 5px;
+    margin-right: 0px;
 }
 
 :deep(.ant-input-search-button) {
@@ -298,12 +309,7 @@ watch(
     margin-left: 5px;
 }
 
-@media (max-width: 575px) {
-    .fillter-left {
-        justify-content: flex-end !important;
-    }
-    .carousel {
-        width: 100% !important;
-    }
+.page-button button {
+    margin-top: 5px;
 }
 </style>

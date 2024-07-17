@@ -5,7 +5,6 @@ namespace App\Services;
 use App\Constants\TimeAppointment;
 use App\Models\Appointment;
 use App\Repositories\AppointmentRepository;
-use Illuminate\Validation\ValidationException;
 
 class AppointmentService
 {
@@ -38,6 +37,11 @@ class AppointmentService
     {
         $data['status'] = Appointment::STATUS_BOOKED;
         $this->appointmentRepository->create($data);
+    }
+
+    public function list(array $params = [])
+    {
+        return $this->appointmentRepository->list($params);
     }
 
 }

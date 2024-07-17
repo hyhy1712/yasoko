@@ -4,9 +4,14 @@ import customer from "@/router/customer.js";
 import {authStore} from "../stores/admin/AuthStore.js";
 import {isArray, isObject} from "@/helpers/CommonHelper.js";
 import {throwNotFoundHttpException} from "@/helpers/ExceptionHelper";
+import routeNameConstant from "@/constants/RouteNameConstant.js";
 
-const routes = [...admin, ...customer];
-
+const routeNotFound = {
+    path: "/not-found",
+    name: routeNameConstant.NOT_FOUND,
+    component: () => import("../views/NotFound.vue")
+}
+const routes = [...admin, ...customer, routeNotFound];
 const router = createRouter({
     history: createWebHistory(),
     routes

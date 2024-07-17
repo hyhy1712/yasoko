@@ -1,16 +1,14 @@
 <template>
-    <a-button type="primary" :size="size" style="background: var(--button-download-color);border-color: var(--button-download-color)">
-        <template #icon>
-            <img src="@assets/images/icon/download.svg" alt="" class="me-1">
-        </template>
-        {{ $t('common.buttons.download') }}
-    </a-button>
+    <base-button
+        :icon="Icon"
+        :title="$t('common.buttons.download')"
+        style="background: var(--button-download-color);border-color: var(--button-download-color)"
+    />
 </template>
 
-<script>
-import BaseButton from "@/components/buttons/BaseButton.vue";
+<script setup>
 
-export default {
-    extends: BaseButton
-}
+import BaseButton from "@/components/buttons/BaseButton.vue";
+import Icon from '@assets/images/icon/download.svg';
+
 </script>

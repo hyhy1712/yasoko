@@ -43,4 +43,9 @@ class AppointmentController extends Controller
         ]));
         return responder()->success();
     }
+
+    public function index(Request $request)
+    {
+        return responder()->success($this->appointmentService->list($request->all()));
+    }
 }

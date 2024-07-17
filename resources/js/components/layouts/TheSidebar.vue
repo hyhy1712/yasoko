@@ -35,11 +35,18 @@ const menu = [
         sidebarKey: SidebarKeyConstant.DASHBOARD,
         icon: 'dashboard'
     },
+    // {
+    //     name: translate('sidebar.category'),
+    //     isVisible: currentUser.hasPermissions(permissionConstant.CATEGORY_VIEW),
+    //     route: routeNameConstant.ADMIN_CATEGORY_VIEW,
+    //     sidebarKey: SidebarKeyConstant.CATEGORY,
+    //     icon: 'dashboard'
+    // },
     {
-        name: translate('sidebar.category'),
-        isVisible: currentUser.hasPermissions(permissionConstant.CATEGORY_VIEW),
-        route: routeNameConstant.ADMIN_CATEGORY_VIEW,
-        sidebarKey: SidebarKeyConstant.CATEGORY,
+        name: translate('sidebar.appointment'),
+        isVisible: currentUser.hasPermissions(permissionConstant.APPOINTMENT_VIEW),
+        route: routeNameConstant.ADMIN_APPOINTMENT_VIEW,
+        sidebarKey: SidebarKeyConstant.APPOINTMENT,
         icon: 'dashboard'
     },
     // {

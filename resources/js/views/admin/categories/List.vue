@@ -1,6 +1,6 @@
 <template>
     <app-page
-        :page-title="$t('user.title')"
+        :page-title="$t('category.title')"
         :advanced-search-input="advancedSearchInput"
         :columns="columns"
         :fetch-data="fetchData"

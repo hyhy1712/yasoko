@@ -75,6 +75,20 @@ const admin = [
                         ]
                     },
                     {
+                        path: "appointments",
+                        children: [
+                            {
+                                path: "",
+                                name: routeNameConstant.ADMIN_APPOINTMENT_VIEW,
+                                component: () => import("../views/admin/appointments/List.vue"),
+                                meta: {
+                                    middleware: {function: abilities, abilities: permissionConstant.APPOINTMENT_VIEW},
+                                    sidebarKey: SidebarKeyConstant.APPOINTMENT
+                                }
+                            }
+                        ]
+                    },
+                    {
                         path: "roles",
                         children: [
                             {

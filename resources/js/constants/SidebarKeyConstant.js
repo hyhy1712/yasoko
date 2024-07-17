@@ -3,6 +3,7 @@ const SIDEBAR_KEYS = {
     ROLE: "role",
     USER: "user",
     CATEGORY: "category",
+    APPOINTMENT: "appointment"
 };
 
 export default SIDEBAR_KEYS;

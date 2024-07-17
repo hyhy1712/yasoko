@@ -44,7 +44,6 @@ const props = defineProps({
         type: Number
     }
 });
-
 const options = ref([]);
 props.fetchOptions().then((data) => {
     options.value = data;

@@ -40,12 +40,7 @@ function throwException(exception) {
             pushRouterWithMessage(messageWarning, translate('message.warning.not_found_model'));
             break;
         case EXCEPTION_TYPE.NOT_FOUND_HTTP:
-            if (authStore().isLoggedIn()) {
-                pushRouterWithMessage(messageWarning, translate('message.warning.not_found_http'));
-            } else {
-                pushRouterWithMessage(messageWarning, translate('message.warning.not_found_http'), routeNameConstant.ADMIN_LOGIN);
-            }
-
+            pushRouterWithMessage(messageWarning, translate('message.warning.not_found_http'), routeNameConstant.NOT_FOUND);
             break;
     }
     throw new Error(exception);

@@ -10,7 +10,9 @@ const PERMISSIONS = {
 
     CATEGORY_VIEW: "category-view",
     CATEGORY_CREATE: "category-create",
-    CATEGORY_EDIT: "category-update"
+    CATEGORY_EDIT: "category-update",
+
+    APPOINTMENT_VIEW: "appointment-view"
 };
 
 export default PERMISSIONS;

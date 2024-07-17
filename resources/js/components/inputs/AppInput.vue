@@ -46,6 +46,7 @@
 import {defineProps, defineEmits} from "vue";
 import EntitySelectConstant from "@/constants/EntitySelectConstant.js";
 import SelectRole from "@/components/inputs/selects/SelectRole.vue";
+import SelectTimeAppointment from "@/components/inputs/selects/SelectTimeAppointment.vue";
 
 defineProps({
     size: {
@@ -85,7 +86,8 @@ defineProps({
 });
 
 const entitySelectMapComponent = {
-    [EntitySelectConstant.ROLE]: SelectRole
+    [EntitySelectConstant.ROLE]: SelectRole,
+    [EntitySelectConstant.TIME_APPOINTMENT]: SelectTimeAppointment
 };
 
 const emit = defineEmits(['update:modelValue']);

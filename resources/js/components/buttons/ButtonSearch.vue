@@ -1,14 +1,12 @@
 <template>
-    <a-button type="primary" :size="size"
-              style="background-color: var(--button-search-color);border-color: var(--button-search-color)">
-        {{ $t('common.buttons.search') }}
-    </a-button>
+    <base-button
+        :title="$t('common.buttons.search')"
+        style="background: var(--button-search-color); border-color: var(--button-search-color)"
+    />
 </template>
 
-<script>
+<script setup>
+
 import BaseButton from "@/components/buttons/BaseButton.vue";
 
-export default {
-    extends: BaseButton
-}
 </script>

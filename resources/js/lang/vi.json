@@ -11,13 +11,14 @@
         "admin": "Quản lý hệ thống",
         "user": "Người dùng",
         "role": "Vai trò",
-        "category": "Danh mục"
+        "category": "Danh mục",
+        "appointment": "Lịch khám"
     },
     "dashboard": {
         "intro": "Hello"
     },
     "footer": {
-        "intro": "© 2023 Educa Corporation. All rights reserved"
+        "intro": "© 2024 Nhà thuốc yasoko"
     },
     "logout": "Đăng xuất",
     "common": {
@@ -43,7 +44,7 @@
     },
     "login": {
         "title": "Đăng nhập",
-        "intro": "Chào mừng bạn đến với hệ thống vận hành của Educa. <br> Vui lòng đăng nhập để tiếp tục công việc!",
+        "intro": "Chào mừng bạn đến với hệ thống vận hành của nhà thuốc Yasoko. <br> Vui lòng đăng nhập để tiếp tục công việc!",
         "buttons": {
             "login": "Đăng nhập"
         },
@@ -153,7 +154,28 @@
         "title": "Lịch khám",
         "columns": {
             "name": "Tên",
-            "slug": "Slug"
+            "gender": "Giới tính",
+            "date_of_birth": "Ngày sinh",
+            "phone": "Số điện thoại",
+            "description": "Vấn đề",
+            "date": "Ngày",
+            "time": "Giờ",
+            "status": "Trạng thái",
+            "created_at": "Ngày tạo",
+            "updated_at": "Ngày cập nhật"
+        },
+        "column_values": {
+            "status": {
+                "0": "Hủy",
+                "1": "Hoạt động"
+            },
+            "gender": {
+                "male": "Nam",
+                "female": "Nữ"
+            }
+        },
+        "other_actions": {
+            "cancel": "Hủy lịch"
         },
         "messages": {
             "create_success": "Đặt lịch khám thành công",
@@ -164,6 +186,9 @@
                 "title": "Xác nhận đặt lịch",
                 "content": "Bạn có chắc chắn muốn đặt lịch với khung giờ này không?"
             }
+        },
+        "buttons": {
+            "check_appointment": "Xem lịch trống"
         }
     }
 }

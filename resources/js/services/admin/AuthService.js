@@ -20,7 +20,7 @@ export default class AuthService {
     }
 
     login(email, password) {
-        return axiosPost('login', {
+        return axiosPost(apiPathConstant.ADMIN_LOGIN, {
             email: email,
             password: password
         }, {}, false).then((response) => {

@@ -16,8 +16,13 @@ const ROUTE_NAME = {
     ADMIN_CATEGORY_CREATE: "admin-category-create",
     ADMIN_CATEGORY_EDIT: "admin-category-edit",
 
+    ADMIN_APPOINTMENT_VIEW: "admin-appointment-view",
+
     //Customer
-    CUSTOMER_BOOK_APPOINTMENT: 'customer-book-appointment'
+    CUSTOMER_BOOK_APPOINTMENT: 'customer-book-appointment',
+
+    //Other
+    NOT_FOUND: 'not-found'
 };
 
 export default ROUTE_NAME;
