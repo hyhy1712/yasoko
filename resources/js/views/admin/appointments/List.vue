@@ -42,7 +42,7 @@
 
 import {ref, watch} from 'vue';
 import AppPage from "@/components/views/AppPage.vue";
-import {translate} from "@/helpers/CommonHelper.js";
+import {translate, convertStringTime} from "@/helpers/CommonHelper.js";
 import RouteNameConstant from "@/constants/RouteNameConstant.js";
 import router from "@/router/index.js";
 import AppointmentService from "@/services/customer/AppointmentService.js";
@@ -99,9 +99,8 @@ const columns = [
         dataIndex: 'time',
         key: 'time',
         customRender: ({text}) => {
-            const hours = text.substring(0, 2);
-            const minutes = text.substring(2, 4);
-            return <b style="font-size:18px">{hours}:{minutes}</b>;
+            const time = convertStringTime(text);
+            return <b style="font-size:18px">{time}</b>;
         },
     },
     {

@@ -53,4 +53,10 @@ export function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+export function convertStringTime(string) {
+    const hours = string.substring(0, 2);
+    const minutes = string.substring(2, 4);
+    return `${hours}:${minutes}`;
+}
+
 

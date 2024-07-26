@@ -20,6 +20,7 @@ const ROUTE_NAME = {
 
     //Customer
     CUSTOMER_BOOK_APPOINTMENT: 'customer-book-appointment',
+    CUSTOMER_DETAIL_APPOINTMENT: 'customer-detail-appointment',
 
     //Other
     NOT_FOUND: 'not-found'

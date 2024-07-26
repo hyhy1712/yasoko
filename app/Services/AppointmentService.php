@@ -36,7 +36,7 @@ class AppointmentService
     public function create($data)
     {
         $data['status'] = Appointment::STATUS_BOOKED;
-        $this->appointmentRepository->create($data);
+        return $this->appointmentRepository->create($data);
     }
 
     public function list(array $params = [])

@@ -32,7 +32,7 @@ class AppointmentController extends Controller
             'description' => 'required'
         ]);
 
-        $this->appointmentService->create($request->only([
+        $appointment = $this->appointmentService->create($request->only([
             'name',
             'gender',
             'date_of_birth',
@@ -41,7 +41,7 @@ class AppointmentController extends Controller
             'time',
             'description'
         ]));
-        return responder()->success();
+        return responder()->success($appointment);
     }
 
     public function index(Request $request)

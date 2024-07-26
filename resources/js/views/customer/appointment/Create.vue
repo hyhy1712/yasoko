@@ -125,6 +125,9 @@ import {isSuccessRequest} from "@/helpers/AxiosHelper.js";
 import {messageError, messageSuccess} from "@/helpers/MessageHelper.js";
 import {modalConfirm} from "@/helpers/ModalHelper.js";
 import router from "@/router/index.js";
+import RouteNameConstant from "@/constants/RouteNameConstant.js";
+import {appointmentStore} from "@/stores/customer/Appointment.js";
+
 
 const formData = reactive({
     name: null,
@@ -163,7 +166,8 @@ const submit = () => {
         appointmentService.create(formData).then((data) => {
             if (isSuccessRequest(data)) {
                 messageSuccess(translate('appointment.messages.create_success'));
-                router.go(0);
+                appointmentStore().setAppointment(data.data);
+                router.push({name: RouteNameConstant.CUSTOMER_DETAIL_APPOINTMENT});
                 return;
             }
             messageError(translate('appointment.messages.create_fail'));
@@ -222,7 +226,7 @@ loadTimeAppointment(dayjs);
 
     .time.active,
     .time:hover {
-        background-color: green;
+        background-color: gray;
     }
 
     .time.disabled {
