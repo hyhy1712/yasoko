@@ -1,6 +1,6 @@
 <template>
 
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center mt-sm-5">
         <div class="row">
             <div class="col-12 col-sm-6 mx-auto">
                 <div class="text-center wrapper p-5">

@@ -61,8 +61,4 @@ const headerStyle = computed(() => ({
     background: linear-gradient(0deg, #E6EEFF 15.10%, #E6EEFF 55.47%, #E6EEFF 100%);
 }
 
-.body {
-    padding-left: 10%;
-    padding-right: 10%;
-}
 </style>
