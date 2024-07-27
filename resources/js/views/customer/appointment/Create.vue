@@ -5,7 +5,6 @@
                 <div class="row mt-3">
                     <div class="col-12">
                         <h1 class="font-weight-bold">ĐĂNG KÝ LỊCH KHÁM</h1>
-                        <p>Lịch khám phòng khám Yasoko. SDT: xxxxxx</p>
                     </div>
                 </div>
 
@@ -239,6 +238,15 @@ loadTimeAppointment(dayjs);
     :deep(.ant-radio-wrapper-in-form-item > span) {
         font-weight: bold;
         font-size: 15px;
+    }
+
+    :deep(.ant-picker-calendar-mode-switch) {
+        display: none;
+    }
+
+    :deep(.ant-picker-calendar-year-select),
+    :deep(.ant-picker-calendar-month-select) {
+        pointer-events: none;
     }
 }
 

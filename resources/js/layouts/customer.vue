@@ -1,7 +1,7 @@
 <template>
     <a-layout class="wrapper">
 
-        <a-layout-header class="header text-white" :style="headerStyle">
+        <a-layout-header class="header text-white">
             <div class="row">
                 <div class="col-12 col-sm-4">
                     <b>NHÀ THUỐC YASOKO</b>
@@ -19,7 +19,7 @@
             <router-view></router-view>
         </a-layout-content>
 
-        <a-layout-footer class="footer text-center">
+        <a-layout-footer class="footer text-center text-white">
             <p>© 2024 - 2024 nhà thuốc Yasoko</p>
             <p>Địa chỉ: Oceanpark xxxx</p>
         </a-layout-footer>
@@ -52,13 +52,16 @@ const headerStyle = computed(() => ({
 }
 
 .header {
-    padding-left: 10%;
-    padding-right: 10%;
     font-size: 20px;
+    background-color: #008000;
+    height: 100%;
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 .footer {
-    background: linear-gradient(0deg, #E6EEFF 15.10%, #E6EEFF 55.47%, #E6EEFF 100%);
+    background: linear-gradient(0deg, #008000 15.10%, #008000 55.47%, #008000 100%);
 }
 
 </style>
